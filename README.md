@@ -180,8 +180,7 @@ O **Dashboard Nola** oferece à Maria e a outros empreendedores do ramo de alime
 ## 👨‍💻 Autor
 
 **Ítallo Guimarães**
-Residência em TIC 36 — Trilha Full Stack
 📍 Universidade Estadual de Feira de Santana (UEFS)
-📧 contato: [seu-email-aqui]
+📧 contato: italloguimaraes1@gmail.com
 
 ---
