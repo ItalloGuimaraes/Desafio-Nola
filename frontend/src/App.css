@@ -1,0 +1,183 @@
+/* --- Reset Básico e Cores --- */
+:root {
+  --background-color: #242424;
+  --text-color: #FFFFFF;
+  --text-color-muted: rgba(255, 255, 255, 0.7);
+  --primary-color: #37ad00; 
+  --card-background: #2f2f2f;
+  --border-color: #444;
+  --content-width: 1280px; 
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-size: 16px;
+  font-weight: 500; 
+}
+
+/* --- Layout de Tela Cheia com Conteúdo Centralizado --- */
+.App {
+  padding: 0; 
+  text-align: center;
+}
+
+/* Container que delimita a largura e centraliza todo o conteúdo (header, main) */
+.content-container {
+  max-width: var(--content-width); 
+  margin: 0 auto;                  
+  padding: 0 2rem; 
+}
+
+/* --- Cabeçalho e Abas --- */
+.app-header {
+  background-color: var(--card-background);
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 2rem;
+  padding: 1em 0; 
+  text-align: center;
+}
+
+.header-content {
+  /* Usamos o content-container para centralizar o cabeçalho */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.app-header h1 {
+  margin: 0 0 0.5rem 0;
+  color: var(--primary-color);
+  font-size: 1.8rem;
+}
+
+.app-header nav button {
+  background-color: transparent;
+  border: 2px solid var(--border-color);
+  color: var(--text-color);
+  padding: 0.6em 1.2em;
+  margin: 0 0.5em;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: border-color 0.25s, background-color 0.25s;
+}
+
+.app-header nav button.active {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: #FFFFFF;
+}
+
+/* --- Módulo de Dashboard (Filtros) --- */
+.analytics-dashboard,
+.clientes-em-risco {
+    /* Módulos do corpo da página (gráfico/tabela) */
+    text-align: left;
+}
+
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  background-color: var(--card-background);
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  border: 1px solid var(--border-color);
+  text-align: center; 
+}
+
+.filtros label {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-right: 0.5rem;
+}
+
+.filtros select,
+.filtros .react-datepicker-wrapper input {
+  padding: 0.6em;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  background-color: #333;
+  color: var(--text-color);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.export-button,
+.zoom-button { /* NOVO: Estilo para o botão de zoom */
+  background-color: var(--primary-color);
+  border: none;
+  color: white;
+  padding: 0.7em 1.2em;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.25s;
+  font-size: 0.9rem;
+}
+
+.export-button {
+  margin-left: 1rem; 
+  background-color: #3f8842;
+}
+
+.export-button:hover,
+.zoom-button:hover {
+  filter: brightness(1.2);
+}
+
+/* --- Gráfico e Tabela --- */
+.visualizacao-container,
+.clientes-container {
+  margin-top: 2rem;
+  padding: 2rem;
+  background-color: var(--card-background);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  text-align: left;
+}
+
+.visualizacao-container h2,
+.clientes-container h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* --- Tabelas  --- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+  table-layout: fixed;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+th, td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-color);
+  text-align: left;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+th {
+  background-color: #3a3a3a;
+  font-size: 1.1rem;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+tr:nth-child(even) {
+  background-color: #2a2a2a;
+}
